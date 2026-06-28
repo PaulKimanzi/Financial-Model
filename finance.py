@@ -18,7 +18,7 @@ fig = px.pie(df, names="Product", values="Quantity", title="Sales by Category",
 #Line Chart
 month_order = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 trend = df.groupby("Month", observed=False)["TotalPrice"].sum().reset_index()
-fig2 = px.line(trend,x="Month",y="TotalPrice",markers=True,title="Monthly Sales Trend")
+fig2 = px.line(trend,x="Month_order",y="TotalPrice",markers=True,title="Monthly Sales Trend")
 
 #render the charts into the Streamlit Layout
 st.plotly_chart(fig, use_container_width=True)
