@@ -1,4 +1,4 @@
-# Financial Analysis Dashboard
+# Sales Analysis Dashboard
 
 🚀 **Live App:** https://paul-wambua-kimanzi.streamlit.app/
 
