@@ -22,5 +22,8 @@ trend = df.groupby("Month", observed=False)["TotalPrice"].sum().reset_index()
 fig2 = px.line(trend,x="Month",y="TotalPrice",markers=True,title="Monthly Sales Trend")
 
 #render the charts into the Streamlit Layout
-st.plotly_chart(fig, use_container_width=True)
-st.plotly_chart(fig2, use_container_width=True)
+col1, col2 = st.columns(2)
+with col1:
+    st.plotly_chart(fig, use_container_width=True)
+with col2:
+    st.plotly_chart(fig2, use_container_width=True)
